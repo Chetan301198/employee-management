@@ -11,7 +11,11 @@ export const getUserData = async () => {
 };
 export const getSingleData = async (id) => {
   try {
-    const response = await fetch(`${base_url}/api/users/${id}`);
+    const response = await fetch(`${base_url}/api/users/${id}`, {
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
     const json = await response.json();
     if (json) return json;
     return {};
