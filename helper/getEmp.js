@@ -1,4 +1,5 @@
-const base_url = "https://empfs.netlify.app";
+// const base_url = "https://empfs.netlify.app";
+const base_url = "http://localhost:3000";
 
 export const getUserData = async () => {
   const response = await fetch(`${base_url}/api/users`, {
@@ -11,7 +12,7 @@ export const getUserData = async () => {
 };
 export const getSingleData = async (id) => {
   try {
-    const response = await fetch(`${base_url}/api/users/${id}`, {
+    const response = await fetch(`/api/users/${id}`, {
       headers: {
         "Content-type": "application/json",
       },
@@ -26,7 +27,7 @@ export const getSingleData = async (id) => {
 
 export const postUserData = async (data) => {
   try {
-    const response = await fetch(`${base_url}/api/users`, {
+    const response = await fetch(`/api/users`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -42,7 +43,7 @@ export const postUserData = async (data) => {
 };
 
 export const putUserData = async (id, data) => {
-  const response = await fetch(`${base_url}/api/users/${id}`, {
+  const response = await fetch(`/api/users/${id}`, {
     method: "PUT",
     headers: {
       "Content-type": "application/json",
@@ -54,7 +55,7 @@ export const putUserData = async (id, data) => {
 };
 
 export const deleteUserData = async (id) => {
-  const response = await fetch(`${base_url}/api/users/${id}`, {
+  const response = await fetch(`/api/users/${id}`, {
     method: "DELETE",
     headers: {
       "Content-type": "application/json",
