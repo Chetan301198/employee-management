@@ -1,5 +1,5 @@
-// const base_url = "https://empfs.netlify.app";
-const base_url = "http://localhost:3000";
+const base_url = "https://empfs.netlify.app";
+// const base_url = "http://localhost:3000";
 
 export const getUserData = async () => {
   const response = await fetch(`${base_url}/api/users`, {
