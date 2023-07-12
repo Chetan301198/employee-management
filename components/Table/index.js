@@ -146,7 +146,7 @@ const Tr = ({ _id, name, email, salary, status, createdAt }) => {
         <td className="py-3 px-8 hidden lg:table-cell">
           {moment(createdAt).format("DD-MM-YYYY")}
         </td>
-        <td className="py-3 px-4 lg:px-8 flex justify-around gap-5">
+        <td className="py-3 px-4 lg:px-8 flex justify-center gap-2">
           <button className="text-blue-600" onClick={handleUpdate}>
             <BiEdit size={25} />
           </button>
