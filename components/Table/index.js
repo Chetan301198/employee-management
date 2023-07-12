@@ -186,7 +186,7 @@ const Tr = ({ _id, name, email, salary, status, createdAt }) => {
                     <b>Status:</b>{" "}
                     <span
                       className={`${
-                        data.staus === "active"
+                        data.status === "active"
                           ? "text-green-500"
                           : "text-red-500"
                       } capitalize`}
